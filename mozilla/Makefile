@@ -12,6 +12,6 @@ install-firefox: firefox-latest.tar.bz2
 	tar xvfC $< /opt/
 	chgrp -R users /opt/firefox
 	chmod -R g+w /opt/firefox
-	ln -s /opt/firefox/firefox /usr/bin/firefox.real
+	ln -fs /opt/firefox/firefox /usr/bin/firefox.real
 	install -o root -g root firefox.desktop /usr/share/applications/
 	update-desktop-database
